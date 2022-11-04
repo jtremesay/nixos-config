@@ -23,6 +23,7 @@
       packages = with pkgs; [
         kdeltachat
         deltachat-desktop
+	filelight
         keepassxc
 	lutris
         nextcloud-client
