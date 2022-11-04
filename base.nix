@@ -24,19 +24,6 @@
   # accidentally delete configuration.nix.
   system.copySystemConfiguration = true;
 
-  # Nix store optim
-  nix.settings.auto-optimise-store = true;
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-  };
-
-  # Nix experimental features
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-
   # Disable passowrd for sudo
   security.sudo.wheelNeedsPassword = false;
 }
