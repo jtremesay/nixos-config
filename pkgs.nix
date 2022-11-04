@@ -1,7 +1,19 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config.allowUnfree = true;
+    overlays = [(
+      self: super: {
+        steam = super.steam.override {
+          extraPkgs = pkgs: with pkgs; [ 
+	    libpng 
+	    icu 
+          ];
+        };
+      }
+    )];
+  };
   environment.systemPackages = with pkgs; [
     curl
     httpie
