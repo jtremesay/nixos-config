@@ -24,6 +24,7 @@
         kdeltachat
         deltachat-desktop
         keepassxc
+	lutris
         nextcloud-client
 	python39Packages.ipython
         thunderbird
