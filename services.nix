@@ -4,6 +4,7 @@
   services.openssh = {
   	enable = true;
 	startWhenNeeded = true;
+	kbdInteractiveAuthentication = false;
 	passwordAuthentication = false;
   };
   services.locate = {
