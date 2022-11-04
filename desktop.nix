@@ -4,5 +4,6 @@
   imports = [
     ./x.nix
     ./sound.nix
+    ./bluetooth.nix
   ];
 }
