@@ -51,6 +51,11 @@
 	enable = true;
 	userEmail = "jonathan.tremesaygues@slaanesh.org";
 	userName = "Jonathan Tremesaygues";
+	extraConfig = {
+	  safe = {
+	    directory = "/etc/nixos";
+	  };
+	};
       };
       neovim = {
         coc.enable = true;
