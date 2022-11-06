@@ -33,6 +33,5 @@
 
   # Network
   networking.hostName = "edemaruh";
-  networking.networkmanager.enable = true;
 }
 

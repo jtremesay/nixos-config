@@ -16,6 +16,5 @@
 
   # Network
   networking.hostName = "music";
-  networking.networkmanager.enable = true;
 }
 

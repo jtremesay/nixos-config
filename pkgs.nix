@@ -1,15 +1,6 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  nixpkgs = {
-    config.allowUnfree = true;
-    overlays = [
-      (self: super: {
-        steam =
-          super.steam.override { extraPkgs = pkgs: with pkgs; [ libpng icu ]; };
-      })
-    ];
-  };
   environment.systemPackages = with pkgs; [ bind curl httpie jq nixfmt ];
 
   programs.fish.enable = true;
@@ -25,6 +16,5 @@
     viAlias = true;
     vimAlias = true;
   };
-  programs.steam = { enable = true; };
   programs.tmux.enable = true;
 }
