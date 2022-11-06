@@ -1,12 +1,7 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports = 
-  [
-    ./users/jtremesay/user.nix
-  ];
+  imports = [ ./users/jtremesay/user.nix ];
 
-  users = {
-    defaultUserShell = pkgs.fish;
-  };
+  users = { defaultUserShell = pkgs.fish; };
 }

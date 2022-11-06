@@ -1,9 +1,5 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports = [
-    ./x.nix
-    ./sound.nix
-    ./bluetooth.nix
-  ];
+  imports = [ ./x.nix ./sound.nix ./bluetooth.nix ];
 }

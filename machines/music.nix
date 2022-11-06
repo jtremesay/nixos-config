@@ -5,12 +5,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = 
-    [ 
-      ../base.nix
-      ../desktop.nix
-      ../users.nix
-    ];
+  imports = [ ../base.nix ../desktop.nix ../users.nix ];
 
   # Encrypted root
   boot.initrd.luks.devices.crypted = {

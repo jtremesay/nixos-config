@@ -2,9 +2,9 @@
 
 {
   services.openssh = {
-  	enable = true;
-	startWhenNeeded = true;
-	kbdInteractiveAuthentication = false;
-	passwordAuthentication = false;
+    enable = true;
+    startWhenNeeded = true;
+    kbdInteractiveAuthentication = false;
+    passwordAuthentication = false;
   };
 }

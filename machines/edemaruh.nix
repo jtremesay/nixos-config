@@ -5,13 +5,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = 
-    [ 
-      ../base.nix
-      ../desktop.nix
-      ../nvidia.nix
-      ../users.nix
-    ];
+  imports = [ ../base.nix ../desktop.nix ../nvidia.nix ../users.nix ];
 
   # Encrypted root
   boot.initrd.luks.devices = {

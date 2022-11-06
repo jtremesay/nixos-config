@@ -3,7 +3,7 @@
 {
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  
+
   # Configure X keyboard
   services.xserver.layout = "fr";
   services.xserver.xkbVariant = "bepo";
@@ -15,7 +15,7 @@
   services.xserver.displayManager.autoLogin = {
     enable = true;
     user = config.users.users.jtremesay.name;
-   };
+  };
   services.xserver.displayManager.sddm.enable = true;
 
   # Deskop manager

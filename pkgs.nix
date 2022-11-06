@@ -3,24 +3,15 @@
 {
   nixpkgs = {
     config.allowUnfree = true;
-    overlays = [(
-      self: super: {
-        steam = super.steam.override {
-          extraPkgs = pkgs: with pkgs; [ 
-	    libpng 
-	    icu 
-          ];
-        };
-      }
-    )];
+    overlays = [
+      (self: super: {
+        steam =
+          super.steam.override { extraPkgs = pkgs: with pkgs; [ libpng icu ]; };
+      })
+    ];
   };
-  environment.systemPackages = with pkgs; [
-    bind
-    curl
-    httpie
-    jq
-  ];
- 
+  environment.systemPackages = with pkgs; [ bind curl httpie jq nixfmt ];
+
   programs.fish.enable = true;
   programs.git.enable = true;
   programs.gnupg.agent = {
@@ -34,8 +25,6 @@
     viAlias = true;
     vimAlias = true;
   };
-  programs.steam = {
-    enable = true;
-  };
+  programs.steam = { enable = true; };
   programs.tmux.enable = true;
 }
