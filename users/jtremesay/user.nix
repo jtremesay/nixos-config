@@ -21,10 +21,10 @@
     nixpkgs.config.allowUnfree = true;
     home = {
       packages = with pkgs; [
-        kdeltachat
         deltachat-desktop
 	filelight
         keepassxc
+	libsForQt5.kpat
 	lutris
         nextcloud-client
 	python39Packages.ipython
