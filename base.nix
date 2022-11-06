@@ -4,9 +4,9 @@
   imports = [
     ./hardware-configuration.nix
     ./boot.nix
+    ./locale.nix
     ./network.nix
     ./pkgs.nix
-    ./locale.nix
     ./services.nix
   ];
 
