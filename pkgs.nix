@@ -28,6 +28,7 @@
     )];
   };
   environment.systemPackages = with pkgs; [
+    bind
     curl
     httpie
     jq
