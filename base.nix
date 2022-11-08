@@ -6,6 +6,7 @@
     ./boot.nix
     ./locale.nix
     ./network.nix
+    ./nix.nix
     ./pkgs.nix
     ./services.nix
   ];
