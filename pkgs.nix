@@ -16,7 +16,7 @@
       hide_userland_threads = true;
     };
   };
-    
+
   programs.neovim = {
     enable = true;
     defaultEditor = true;

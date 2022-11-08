@@ -24,7 +24,7 @@
         deltachat-desktop
         filelight
         keepassxc
-	libreoffice-qt
+        libreoffice-qt
         libsForQt5.kpat
         lutris
         nextcloud-client
@@ -52,9 +52,9 @@
         enable = true;
         userEmail = "jonathan.tremesaygues@slaanesh.org";
         userName = "Jonathan Tremesaygues";
-        extraConfig = { 
-	  init = { defaultBranch = "main"; };
-	  safe = { directory = "/etc/nixos"; };   
+        extraConfig = {
+          init = { defaultBranch = "main"; };
+          safe = { directory = "/etc/nixos"; };
         };
       };
       neovim = {
