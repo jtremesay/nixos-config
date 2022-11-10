@@ -37,7 +37,7 @@
       sessionPath = [ "\${HOME}/.local/bin" ];
       sessionVariables = {
         EDITOR = "nvim";
-        PAGER = "LESS";
+        PAGER = "less";
         VISUAL = "nvim";
       };
       file = {
