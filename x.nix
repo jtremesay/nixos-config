@@ -1,23 +1,36 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  services = {
+    # Enable the X11 windowing system.
+    xserver = {
+      enable = true;
 
-  # Configure X keyboard
-  services.xserver.layout = "fr";
-  services.xserver.xkbVariant = "bepo";
+      # Configure X keyboard
+      layout = "fr";
+      xkbVariant = "bepo";
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
+      # Enable touchpad support (enabled default in most desktopManager).
+      libinput.enable = true;
 
-  # Display manager
-  services.xserver.displayManager.autoLogin = {
-    enable = true;
-    user = config.users.users.jtremesay.name;
+      # Display manager
+      displayManager = {
+        autoLogin = {
+          enable = true;
+          user = config.users.users.jtremesay.name;
+        };
+        sddm.enable = true;
+	session = [
+          {
+	    manage = "desktop";
+	    name = "XSession";
+	    start = ''exec $HOME/.xsession'';
+	  }
+	];
+      };
+
+      # Deskop manager
+      desktopManager.plasma5.enable = true;
+    };
   };
-  services.xserver.displayManager.sddm.enable = true;
-
-  # Deskop manager
-  services.xserver.desktopManager.plasma5.enable = true;
 }
