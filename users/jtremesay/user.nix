@@ -166,7 +166,7 @@
               "Mod4+p" = "layout toggle split";
 
               # Workspace management
-              "Mod4+10" = "workspace number 10";
+              "Mod4+0" = "workspace number 10";
               "Mod4+1" = "workspace number 1";
               "Mod4+2" = "workspace number 2";
               "Mod4+3" = "workspace number 3";
