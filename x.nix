@@ -20,17 +20,13 @@
           user = config.users.users.jtremesay.name;
         };
         sddm.enable = true;
-	session = [
-          {
-	    manage = "desktop";
-	    name = "XSession";
-	    start = ''exec $HOME/.xsession'';
-	  }
-	];
+        session = [{
+          manage = "desktop";
+          name = "XSession";
+          start = "exec $HOME/.xsession";
+        }];
       };
-
-      # Deskop manager
-      desktopManager.plasma5.enable = true;
+      desktopManager = { plasma5.enable = true; };
     };
   };
 }

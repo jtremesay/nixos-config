@@ -108,16 +108,12 @@
     xsession = {
       enable = true;
       initExtra = ''
-xsetroot -grey
+        xsetroot -grey
 
-# No sure why, but i3 doesn't take in account global settings
-setxkbmap -layout ${config.services.xserver.layout} -variant ${config.services.xserver.xkbVariant}
-'';
-      windowManager = {
-        i3 = {
-          enable = true;
-	};
-      };
+        # No sure why, but i3 doesn't take in account global settings
+        setxkbmap -layout ${config.services.xserver.layout} -variant ${config.services.xserver.xkbVariant}
+      '';
+      windowManager = { i3 = { enable = true; }; };
     };
   };
 }
