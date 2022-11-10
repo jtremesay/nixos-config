@@ -1,5 +1,9 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports = [ ./services/locate.nix ./services/ssh.nix ];
+  imports = [ 
+    ./services/fwupd.nix 
+    ./services/locate.nix 
+    ./services/ssh.nix 
+  ];
 }
