@@ -30,6 +30,8 @@
         lutris
         nextcloud-client
         pcmanfm
+	pulseaudio
+	pulsemixer
         python39Packages.ipython
         thunderbird
         vscode-with-extensions
