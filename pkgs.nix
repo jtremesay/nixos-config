@@ -1,7 +1,7 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ bind curl httpie jq nixfmt psmisc ];
+  environment.systemPackages = with pkgs; [ bind curl httpie jq nixfmt psmisc python3Full ];
 
   programs = {
     fish.enable = true;
