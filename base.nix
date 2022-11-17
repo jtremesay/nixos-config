@@ -4,7 +4,6 @@
   imports = [
     ./hardware-configuration.nix
     ./pkgs.nix
-    ./services.nix
   ];
 
   boot.loader = {
@@ -38,6 +37,17 @@
   };
   security.sudo.wheelNeedsPassword = false;
   services = {
+    fwupd.enable = true;
+    locate = {
+      enable = true;
+      interval = "hourly";
+    };
+    openssh = {
+      enable = true;
+      startWhenNeeded = true;
+      kbdInteractiveAuthentication = false;
+      passwordAuthentication = false;
+    };
     resolved.enable = true;
   };
   system = {
