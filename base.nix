@@ -3,7 +3,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./nix.nix
     ./pkgs.nix
     ./services.nix
   ];
@@ -26,6 +25,16 @@
       "[2620:fe::9]" 
     ];
     search = [ config.networking.domain ];
+  };
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+    };
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = [ "nix-command" "flakes" ];
+    };
   };
   security.sudo.wheelNeedsPassword = false;
   services = {
