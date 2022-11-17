@@ -24,7 +24,7 @@
   # It would be better to have steam enabled per user
   programs.steam.enable = true;
   services = {
-    # Enable the X11 windowing system.
+    blueman.enable = true;
     xserver = {
       enable = true;
 
