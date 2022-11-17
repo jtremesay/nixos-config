@@ -1,6 +1,8 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
+  imports = [ ./home/jtremesay/desktop.nix ];
+
   hardware = {
     bluetooth.enable = true;
     pulseaudio = {
