@@ -3,7 +3,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./pkgs.nix
   ];
 
   boot.loader = {
@@ -14,6 +13,7 @@
     font = "Lat2-Terminus16";
     keyMap = "fr-bepo";
   };
+  environment.systemPackages = with pkgs; [ bind curl httpie jq nixfmt psmisc python3Full ];
   i18n.defaultLocale = "en_US.UTF-8";
   networking = {
     domain = "slaanesh.org";
@@ -34,6 +34,28 @@
       auto-optimise-store = true;
       experimental-features = [ "nix-command" "flakes" ];
     };
+  };
+  programs = {
+    fish.enable = true;
+    git.enable = true;
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
+    htop = {
+      enable = true;
+      settings = {
+        hide_kernel_threads = true;
+        hide_userland_threads = true;
+      };
+    };
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+      viAlias = true;
+      vimAlias = true;
+    };
+    tmux.enable = true;
   };
   security.sudo.wheelNeedsPassword = false;
   services = {
