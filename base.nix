@@ -3,7 +3,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./boot.nix
     ./locale.nix
     ./network.nix
     ./nix.nix
@@ -11,6 +10,10 @@
     ./services.nix
   ];
 
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+  };
   security.sudo.wheelNeedsPassword = false;
   system = {
     # This value determines the NixOS release from which the default
