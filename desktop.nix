@@ -1,12 +1,6 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  # Use network manager
-  networking.networkmanager.enable = true;
-
-  # It would be better to have steam enabled per user
-  programs.steam.enable = true;
-
   hardware = {
     bluetooth.enable = true;
     pulseaudio = {
@@ -25,6 +19,8 @@
       })
     ];
   };
+  # It would be better to have steam enabled per user
+  programs.steam.enable = true;
   services = {
     # Enable the X11 windowing system.
     xserver = {

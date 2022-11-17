@@ -23,6 +23,7 @@
       "[2620:fe::fe]" 
       "[2620:fe::9]" 
     ];
+    networkmanager.enable = true;
     search = [ config.networking.domain ];
   };
   nix = {
