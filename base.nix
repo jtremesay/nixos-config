@@ -90,7 +90,7 @@
   users.users.jtremesay = {
     isNormalUser = true;
     extraGroups = [ "audio" "networkmanager" "wheel" ];
-    useDefaultShell = true;
+    shell = pkgs.fish;
   };
 
   users.extraUsers.jtremesay = {
