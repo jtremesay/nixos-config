@@ -3,7 +3,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./network.nix
     ./nix.nix
     ./pkgs.nix
     ./services.nix
@@ -18,7 +17,20 @@
     keyMap = "fr-bepo";
   };
   i18n.defaultLocale = "en_US.UTF-8";
+  networking = {
+    domain = "slaanesh.org";
+    nameservers = [ 
+      "9.9.9.9" 
+      "149.112.122.122" 
+      "[2620:fe::fe]" 
+      "[2620:fe::9]" 
+    ];
+    search = [ config.networking.domain ];
+  };
   security.sudo.wheelNeedsPassword = false;
+  services = {
+    resolved.enable = true;
+  };
   system = {
     # This value determines the NixOS release from which the default
     # settings for stateful data, like file locations and database versions
