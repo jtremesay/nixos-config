@@ -3,7 +3,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./locale.nix
     ./network.nix
     ./nix.nix
     ./pkgs.nix
@@ -14,6 +13,11 @@
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
   };
+  console = {
+    font = "Lat2-Terminus16";
+    keyMap = "fr-bepo";
+  };
+  i18n.defaultLocale = "en_US.UTF-8";
   security.sudo.wheelNeedsPassword = false;
   system = {
     # This value determines the NixOS release from which the default
@@ -29,4 +33,5 @@
     # accidentally delete configuration.nix.
     copySystemConfiguration = true;
   };
+  time.timeZone = "Europe/Paris";
 }
