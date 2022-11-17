@@ -34,6 +34,9 @@
         extraConfig = { modi = "drun,run,window"; };
       };
     };
+    services = {
+      mpris-proxy.enable = true;
+    };
     xsession = {
       enable = true;
       initExtra = ''
