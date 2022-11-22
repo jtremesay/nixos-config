@@ -17,7 +17,8 @@
     };
     overlays = [
       (self: super: {
-        steam = super.steam.override { extraPkgs = pkgs: with pkgs; [ libpng icu ]; };
+        steam =
+          super.steam.override { extraPkgs = pkgs: with pkgs; [ libpng icu ]; };
       })
     ];
   };

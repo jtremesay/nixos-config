@@ -1,14 +1,10 @@
 
 
-{ config, lib, pkgs, modulesPath, ... }:
-{
+{ config, lib, pkgs, modulesPath, ... }: {
   home-manager.users.jtremesay = {
     nixpkgs.config.allowUnfree = true;
     home = {
-      packages = with pkgs; [
-        direnv
-        python39Packages.ipython
-      ];
+      packages = with pkgs; [ direnv python39Packages.ipython ];
       sessionPath = [ "\${HOME}/.local/bin" ];
       sessionVariables = {
         EDITOR = "nvim";

@@ -1,8 +1,8 @@
 { config, lib, pkgs, modulesPath, ... }:
 let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-in
-{
+  home-manager = builtins.fetchTarball
+    "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+in {
   imports = [
     <home-manager/nixos>
     ./hardware-configuration.nix
@@ -17,16 +17,20 @@ in
     font = "Lat2-Terminus16";
     keyMap = "fr-bepo";
   };
-  environment.systemPackages = with pkgs; [ bind curl httpie jq nixfmt psmisc python3Full ];
+  environment.systemPackages = with pkgs; [
+    bind
+    curl
+    httpie
+    jq
+    nixfmt
+    psmisc
+    python3Full
+  ];
   i18n.defaultLocale = "en_US.UTF-8";
   networking = {
     domain = "slaanesh.org";
-    nameservers = [ 
-      "9.9.9.9" 
-      "149.112.122.122" 
-      "[2620:fe::fe]" 
-      "[2620:fe::9]" 
-    ];
+    nameservers =
+      [ "9.9.9.9" "149.112.122.122" "[2620:fe::fe]" "[2620:fe::9]" ];
     networkmanager.enable = true;
     search = [ config.networking.domain ];
   };

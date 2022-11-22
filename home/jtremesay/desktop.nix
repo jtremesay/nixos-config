@@ -15,8 +15,8 @@
         lutris
         nextcloud-client
         pcmanfm
-	pulsemixer
-	scrot
+        pulsemixer
+        scrot
         thunderbird
         vscode-with-extensions
       ];
@@ -35,9 +35,7 @@
         extraConfig = { modi = "drun,run,window"; };
       };
     };
-    services = {
-      mpris-proxy.enable = true;
-    };
+    services = { mpris-proxy.enable = true; };
     xsession = {
       enable = true;
       initExtra = ''
