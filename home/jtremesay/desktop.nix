@@ -15,7 +15,8 @@
         lutris
         nextcloud-client
         pcmanfm
-	      pulsemixer
+	pulsemixer
+	scrot
         thunderbird
         vscode-with-extensions
       ];
