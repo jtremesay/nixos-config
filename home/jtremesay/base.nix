@@ -5,7 +5,7 @@
     nixpkgs.config.allowUnfree = true;
     home = {
       packages = with pkgs; [ direnv python39Packages.ipython ];
-      sessionPath = [ "\${HOME}/.local/bin" ];
+      sessionPath = [  "\${HOME}/.cargo/bin" "\${HOME}/.local/bin" ];
       sessionVariables = {
         EDITOR = "nvim";
         PAGER = "less";
