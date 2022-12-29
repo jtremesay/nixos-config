@@ -33,6 +33,7 @@ in {
       [ "9.9.9.9" "149.112.122.122" "[2620:fe::fe]" "[2620:fe::9]" ];
     networkmanager.enable = true;
     search = [ config.networking.domain ];
+    firewall.enable = false;
   };
   nix = {
     gc = {
