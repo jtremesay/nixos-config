@@ -25,6 +25,7 @@ in {
     nixfmt
     psmisc
     python3Full
+    unzip
   ];
   i18n.defaultLocale = "en_US.UTF-8";
   networking = {

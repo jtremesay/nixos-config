@@ -18,6 +18,7 @@
         pulsemixer
         scrot
         thunderbird
+	vlc
         vscode-with-extensions
       ];
       file = {
